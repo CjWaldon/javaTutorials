@@ -28,6 +28,10 @@ public class TodoData {
         formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
     }
 
+    public void deleteTodoItem(TodoItem item){
+        todoItems.remove(item);
+    }
+
     public void loadToDoItems() throws IOException {
         todoItems = FXCollections.observableArrayList();
         Path path = Paths.get(filename);
