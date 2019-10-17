@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+<contact>
+	<first_name>cj</first_name>
+	<last_name>waldon</last_name>
+	<phone_number>123</phone_number>
+	<notes>notesss</notes>
+</contact>
+<contact>
+	<first_name>bruce </first_name>
+	<last_name>wayne</last_name>
+	<phone_number>123</phone_number>
+	<notes>batman</notes>
+</contact>
+<contact>
+	<first_name>peter</first_name>
+	<last_name>porker</last_name>
+	<phone_number>2222222</phone_number>
+	<notes>spiderham</notes>
+</contact>
+</contacts>
