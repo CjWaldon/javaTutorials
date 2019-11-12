@@ -35,11 +35,13 @@ public class Main {
 //                return emp1.getName().compareTo(emp2.getName());
 //            }
 //        });
-//        for(Employee employee: employees){
-//            System.out.println(employee.getName());
-//        }
 
+        Collections.sort(employees,(Employee employee1, Employee employee2)->
+                employee1.getname().compareTo(employee2.getname()));
 
+        for(Employee employee: employees){
+            System.out.println(employee.getName());
+        }
 
     }
 }
