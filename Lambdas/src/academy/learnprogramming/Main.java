@@ -1,7 +1,4 @@
 package academy.learnprogramming;
-
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -29,20 +26,43 @@ public class Main {
         employees.add(jack);
         employees.add(snow);
 
-//        Collections.sort(employees, new Comparator<Employee>() {
-//            @Override
-//            public int compare(Employee emp1, Employee emp2) {
-//                return emp1.getName().compareTo(emp2.getName());
-//            }
-//        });
-
-        Collections.sort(employees,(Employee employee1, Employee employee2)->
-                employee1.getname().compareTo(employee2.getname()));
-
-        for(Employee employee: employees){
+//        for(Employee employee: employees){
+//            System.out.println(employee.getName());
+//            System.out.println(employee.getAge());
+//        }
+        employees.forEach(employee ->{
             System.out.println(employee.getName());
-        }
+            System.out.println(employee.getAge());
+        });
 
+////        Collections.sort(employees, new Comparator<Employee>() {
+////            @Override
+////            public int compare(Employee emp1, Employee emp2) {
+////                return emp1.getName().compareTo(emp2.getName());
+////            }
+////        });
+//
+//        Collections.sort(employees,(Employee employee1, Employee employee2)->
+//                employee1.getName().compareTo(employee2.getName()));
+//
+//        for(Employee employee: employees){
+//            System.out.println(employee.getName());
+//        }
+//
+//        UpperConcat uc = (s1,s2) -> {
+//           String result = s1.toUpperCase()+ s2.toUpperCase();
+//           return result;
+//        };
+//        String sillyString = doStringStuff(uc, employees.get(0).getName(), employees.get(1).getName());
+//        System.out.println(sillyString);
+
+        AnotherClass anotherClass = new AnotherClass();
+        String s = anotherClass.doSomething();
+        System.out.println(s);
+    }
+
+    public final static String doStringStuff(UpperConcat uc, String s1, String s2){
+        return uc.upperAndConcat(s1,s2);
     }
 }
 
@@ -71,3 +91,34 @@ class Employee{
         this.age = age;
     }
 }
+
+interface UpperConcat{
+    public String upperAndConcat(String s1, String s2);
+}
+
+// with lambda
+class AnotherClass {
+    public String doSomething(){
+        UpperConcat uc = (s1,s2)->{
+            System.out.println("The lambda expression's class is: "+getClass().getSimpleName());
+            String result = s1.toUpperCase()+  s2.toUpperCase();
+            return result;
+        };
+        System.out.println("The Anotherclass class's name is "+ getClass().getSimpleName());
+        return Main.doStringStuff(uc,"String1","String2");
+    }
+}
+
+//with anonymous class
+//class AnotherClass {
+//    public String doSomething(){
+//        System.out.println("The AnotherClass class's name is: " +getClass().getSimpleName());
+//        return Main.doStringStuff(new UpperConcat() {
+//            @Override
+//            public String upperAndConcat(String s1, String s2) {
+//                System.out.println("The anonymous class's name is: "+getClass().getSimpleName());
+//                return s1.toUpperCase() + s2.toUpperCase();
+//            }
+//        }, "String1", "String2");
+//    }
+//}
