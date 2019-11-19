@@ -1,11 +1,6 @@
-
 package com.company;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -29,6 +24,15 @@ public class Main {
         employees.add(tim);
         employees.add(jack);
         employees.add(snow);
+
+//        for(Employee employee: employees){
+//            System.out.println(employee.getName());
+//            System.out.println(employee.getAge());
+//        }
+        employees.forEach(employee ->{
+            System.out.println(employee.getName());
+            System.out.println(employee.getAge());
+        });
 
 ////        Collections.sort(employees, new Comparator<Employee>() {
 ////            @Override
