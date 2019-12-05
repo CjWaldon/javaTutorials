@@ -31,8 +31,8 @@ public class BankAccountTest {
 
     @org.junit.Test(expected = IllegalArgumentException.class)
     public void withdraw_notBranch() {
-        double balance = account.withdraw(600.00, false);
-        assertEquals(400, balance,0);
+        account.withdraw(600.00, false);
+        fail("Should throw illegal argument exception");
     }
 
     @org.junit.Test
