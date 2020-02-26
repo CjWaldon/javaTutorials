@@ -77,3 +77,20 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+Banking/Banking.iml
+Banking/out/production/Banking/com/company/BankAccount.class
+Banking/out/production/Banking/com/company/BankAccountTest.class
+Banking/out/production/Banking/com/company/BankAccountTestParameterized.class
+Banking/out/production/Banking/com/company/Main.class
+JunitChallenge/JunitChallenge.iml
+JunitChallenge/out/production/JunitChallenge/com/company/Main.class
+JunitChallenge/out/production/JunitChallenge/com/company/Utilities.class
+JunitChallenge/out/production/JunitChallenge/com/company/UtilitiesTest.class
+JunitChallenge/out/production/JunitChallenge/com/company/UtilitiesTestParameterized.class
+LambdaChallenges/LambdaChallenges.iml
+LambdaChallenges/out/production/LambdaChallenges/com/company/Main.class
+RegularExpressions/RegularExpressions.iml
+Streams/Streams.iml
+Streams/out/production/Streams/com/company/Department.class
+Streams/out/production/Streams/com/company/Employee.class
+Streams/out/production/Streams/com/company/Main.class
